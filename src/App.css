@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #afb2bf;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 3px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #000814;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #afb2bf;
+    border-radius: 10px;
+    visibility: hidden;
+}
+
+*:active::-webkit-scrollbar-thumb,
+*:focus::-webkit-scrollbar-thumb,
+*:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+
+:root {
+    --gradient-03: linear-gradient(138deg, #9CECFB 0%, #65C7F7 50%, #0052D4 100%);
+    --gradient-05: linear-gradient(138deg, #1FA2FF 0%, #12D8FA 50%, #A6FFCB 100%);
+    --gradient-02: linear-gradient(144deg, #8A2BE2 0%, #FFA500 50%, #F8F8FF 100%);
+}
+
+.homepage-bg {
+    background: url("../src/assets/Images/bghome.svg");
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: repeating-conic-gradient(#FFD60A 0 90deg, #000814 0 180deg);
+    animation: s1 1s infinite linear;
+    border: 1px solid #DBDDEA;
+}
+
+@keyframes s1 {
+    100% {
+        transform: rotate(.5turn)
+    }
+}
+
+/* For conditional coloring of icons in dashboard sidebar */
+.active-icon {
+    fill: #ffd60a !important;
+    color: #ffd60a !important;
+}
+
+.inactive-icon {
+    fill: #838894;
+    color: #838894;
+}
+
+/* Buttons */
+.yellowButton {
+    @apply cursor-pointer rounded-md bg-yellow-50 px-[20px] py-[8px] font-semibold text-richblack-900;
+}
+
+/* Swiper CSS Starts */
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.blackButton {
+    @apply cursor-pointer rounded-md bg-richblack-800 px-[20px] py-[8px] font-semibold text-richblack-5;
+}
+
+.lable-style {
+    @apply text-[14px] text-richblack-5;
+}
+
+.form-style {
+    @apply rounded-lg bg-richblack-700 p-3 text-[16px] leading-[24px] text-richblack-5 shadow-[0_1px_0_0] shadow-white/50 placeholder:text-richblack-400 focus:outline-none;
+}
+
+.section_heading {
+    @apply text-2xl font-bold text-richblack-5 lg:text-4xl;
+}
+
+.code-border {
+    border: 2px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to right bottom, #ffffff38, #ffffff00);
+    background: linear-gradient(111.93deg,
+            rgba(14, 26, 45, 0.24) -1.4%,
+            rgba(17, 30, 50, 0.38) 104.96%);
+}
